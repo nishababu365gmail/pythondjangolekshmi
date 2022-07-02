@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="POST">
+      {%csrf_token%}
+      <!-- <input type="text" name="fname" placeholder="Enter first name" />
+      <input type="text" name="lname" placeholder="Enter Last name" />
+      <input type="text" name="adharno" placeholder="Enter adhar no" />
+      <input type="text" name="age" placeholder="Enter age" /> -->
+      <div>Firstname {{myform.fname}}</div>
+      <div>Last Name {{myform.lname}}</div>
+      <div>Age {{myform.age}}</div>
+      <div>Adharno {{myform.adharno}}</div>
+
+      <input type="submit" value="Save" />
+    </form>
+
+    <h1>You entered {{firstname}} as firstname {{lastname}} as lastname</h1>
+  </body>
+</html>

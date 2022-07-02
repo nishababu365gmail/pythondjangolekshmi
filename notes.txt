@@ -1,0 +1,13 @@
+a form class’s fields map to HTML form <input> elements
+Steps Needed for rendering an object in django
+
+get hold of it in the view (fetch it from the database, for example)
+pass it to the template context
+expand it to HTML markup using template variables
+
+form rendering options
+
+class CommentForm(forms.Form):
+    name = forms.CharField(widget=forms.TextInput(attrs={'class': 'special'}))
+    url = forms.URLField()
+    comment = forms.CharField(widget=forms.TextInput(attrs={'size': '40'}))

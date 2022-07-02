@@ -1,0 +1,25 @@
+{% extends 'lekshmiapp/base.html'%}
+{%block content%}
+
+<form method="GET">
+    <body>
+    {%csrf_token%}
+    <input type="text" name="searchterm" id="searchterm"  value="{{searchterm}}"/>
+
+    <input type="submit" id="btnSearchnisha" value="Search me jquery" />
+    {{searchterm}}
+    {% for book in page.object_list %}
+    <div class="book-item">{{ book.employee_fname }} by {{ book.employee_lname}}</div>
+    <br />
+    {% endfor %}
+</body>
+</form>
+<div class="page-links">
+    {% if page.has_previous %}
+    <a href="{% url 'babu' %}?{% if searchterm %}searchterm={{searchterm}}&{%endif%}page={{ page.previous_page_number }}">Previous Page</a>
+    {% endif %} {% if page.has_next %}
+    <a href="{% url 'babu' %}?{% if searchterm %}searchterm={{searchterm}}&{%endif%}page={{ page.next_page_number }}">Next Page</a>
+    {% endif %}
+  </div>
+
+{%endblock%}

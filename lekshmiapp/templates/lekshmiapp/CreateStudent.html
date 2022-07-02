@@ -1,0 +1,12 @@
+{% extends 'lekshmiapp/base.html'%}
+{%block content%}
+
+<form method="POST">
+    {%csrf_token%}
+    <table>
+        {{studentform.as_table}}
+    </table>
+    <input type="submit" value="save"/>
+</form>
+
+{%endblock%}

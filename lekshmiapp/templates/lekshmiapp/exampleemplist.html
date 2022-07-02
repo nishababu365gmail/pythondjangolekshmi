@@ -1,0 +1,38 @@
+{% extends 'lekshmiapp\base.html' %} {%block header%}
+<h1>List of All Employees</h1>
+{%endblock%} {% block content%}
+<form method="POST">
+  <!-- <table> -->
+    {% for item in emplist%}
+    <div class="main-container">
+      <ul>
+        
+      </ul>
+      <ul class="main-container__items">       
+        <li class="main-container__item main-container__item--fname">{{item.employee_fname}}</li>
+        <li class="main-container__item main-container__item--lname">{{item.employee_lname}}</li>
+        <li class="main-container__item main-container__item--age">{{item.employee_age}}</li>
+        <li class="main-container__item main-container__item--adharno">{{item.employee_adharnos}}</li>
+        <li class="main-container__item main-container__item--date">          
+          {% now "Y" %}<br>
+          {% now "F" %}<br>
+          {% now "l" %}<br>
+        </li>
+      </ul>
+    </div>
+    <!-- <tr>
+      <td>{{item.employee_fname}}</td>
+      <td>{{item.employee_lname}}</td>
+      <td>{{item.employee_age}}</td>
+      <td>{{item.employee_adharnos}}</td>
+
+      <td>
+        <a href="{% url 'nishababu' fname=item.employee_fname %}">Click me</a>
+      </td>
+    </tr> -->
+    {%endfor%}
+  <!-- </table> -->
+</form>
+{% endblock%}
+<!-- </body>
+</html> -->

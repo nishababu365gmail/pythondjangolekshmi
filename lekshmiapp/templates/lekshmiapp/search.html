@@ -1,0 +1,46 @@
+{% extends 'lekshmiapp\base.html' %} {%block header%}
+<h1>List of All Employees</h1>
+{%endblock%} {% block content%}
+<!-- <form method="GET"> -->
+<form method="GET">
+    {% csrf_token %}
+    <input type="text" name="searchterm" id="searchterm" />
+
+    <input type="button" id="btnSearch" value="Search me jquery" />
+    {{searchterm}}
+    <table id="emplist">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    {%if searchlist%}
+    <div id="first-get">
+    <ul>
+        {%for emp in searchlist%}
+        <li>
+            {{emp.employee_lname}}
+        </li>
+        {% endfor %}
+    </ul>
+    {%endif%}
+</div>
+    <div id="page-links">my link
+       
+    </div> 
+    <input type="hidden" id="hdTotalCount"/>
+    <select id="cmbname">
+        <option value="0">select name</option>
+    </select>
+    <select class="js-example-basic-single" style="width:150px" name="state">
+
+    </select>
+</form>
+{% endblock%}
+<!-- </body>
+</html> -->

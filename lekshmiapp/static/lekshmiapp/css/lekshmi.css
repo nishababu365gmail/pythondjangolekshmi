@@ -1,0 +1,53 @@
+
+body{
+    background-color: #BCAAA4;
+}
+.main-container{
+    border: 2px solid black;
+    width:50%;
+   margin:2px;
+    background-color: #A1887F;
+    border-radius: 15px;
+    align-content: center;
+}
+.main-container__items{
+    list-style: none;
+    margin-top:10px;
+}
+.main-container__item{
+    display: inline-block;
+    padding:2px 2px;
+    border:1px solid blue;
+    background-color:#8D6E63;
+    border-radius: 5px;
+    
+    margin:5px 10px;
+    color: floralwhite;
+    font-weight: bold;
+}
+
+.main-container__item--fname{
+    float: left;   
+   
+    width:100px;
+   
+}
+.main-container__item--lname{
+    float: left;
+    
+    width:100px;
+    
+}
+.main-container__item--age{
+    float: left;    
+    width:30px;   
+}
+.main-container__item--adharno{
+    float: left;   
+    width:50px;
+    
+}
+
+.main-container__item--date{
+    width:100px;
+}

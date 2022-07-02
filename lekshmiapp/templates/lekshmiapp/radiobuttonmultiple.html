@@ -1,0 +1,14 @@
+{% extends 'lekshmiapp/base.html'%}
+{%block content%}
+<table>
+    {{myform.as_table}}
+    <div display="flex">
+    {% for item in myform.status %}
+    <div class="myradio">
+        {{ item }}
+    </div>
+    
+    {% endfor %}
+</div>
+</table>
+{%endblock%}

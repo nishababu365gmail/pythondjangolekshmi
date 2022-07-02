@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form class Introduction</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <form method="POST">
+    {%csrf_token%} {{myform.as_p}}
+    <!-- <div class="container">
+        <div class="form-group">
+          <label>First Name </label>
+          {{ myform.fname }}
+        </div>
+        <div class="form-group">
+          <label>Last Name </label>
+          {{ myform.lname }}
+        </div>
+        <div class="form-group">
+          <label>Adhar No</label>
+          {{ myform.adharno }}
+        </div>-->
+
+    <p>
+      You entered firstname as {{sdfname}} second name as {{sdlname}} whose
+      adhar no is {{sdadharno}}
+    </p>
+    </div>
+    <div class="form-group">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+
+</html>
